@@ -4,7 +4,7 @@
   margin: 0;
 }
 body {
-  background-image: url(../../imgs/backgroung.jpg);
+  background-image: url("../imgs/backgroung.jpg");
   /* background-color: #111; */
   height: 100vh;
   background-size: cover;
@@ -21,8 +21,8 @@ body {
   padding: 0.7em, 0.7em;
 }
 .nav-logo img {
-  width: 90px;
-  height: 70px;
+  width: 130px;
+  height: 100px;
   float: left;
   cursor: pointer;
   border-radius: 50%;
@@ -40,7 +40,7 @@ li,
 button {
   text-decoration: none;
   color: #ffff;
-  font-size: 0.9em;
+  font-size: 1.3em;
   font-weight: 2000;
 }
 
@@ -122,6 +122,88 @@ ul {
 }
 
 .new-client:hover {
+  background-color: #8e0b0b;
+}
+
+/*new registration form*/
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  width: 66%;
+  height: 80%;
+  background-color: #ffff;
+  margin-top: 2.3em;
+  padding: 1em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #000000;
+  color: #000000;
+}
+.reg-form h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+/* .reg-form form {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+} */
+/* .reg-form input label{
+  
+    margin: .4rem 0;
+    display: block;
+} */
+.reg-form #submit {
+  background-color: #964545;
+  padding: 0.4em;
+  border-radius: 20%;
+  color: #ffff;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.3s ease-in 0s;
+}
+  
+.reg-form #submit:hover {
+  background-color: #8e0b0b;
+}
+/* view client */
+.lookup-main {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: start;
+  color: #ffff;
+}
+
+
+.view-client {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: top;
+  width: 66%;
+  height: 26%;
+  background-color: #ffff;
+  /* margin-top: 0.4em; */
+  padding: 1.2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #000000;
+  color: #000000;
+  
+}
+
+.lookup{
+  background-color: #964545;
+  padding: 0.4em;
+  border-radius: 20%;
+  color: #ffff;
+  display: block;
+  margin: 8px;
+  transition: all 0.3s ease-in 0s; 
+}
+.lookup:hover{
   background-color: #8e0b0b;
 }
 

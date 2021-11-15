@@ -21,7 +21,8 @@ body {
   padding: 0.7em, 0.7em;
 }
 .nav-logo img {
-  width: 130px;
+  width: 130px auto;
+  margin-bottom: 10px;
   height: 100px;
   float: left;
   cursor: pointer;
@@ -132,8 +133,8 @@ ul {
   align-items: center;
   margin: 0 auto;
   justify-content: center;
-  width: 66%;
-  height: 80%;
+  width: 50% ;
+  height: 80% auto;
   background-color: #ffff;
   margin-top: 2.3em;
   padding: 1em;
@@ -169,21 +170,36 @@ ul {
 }
 /* view client */
 .lookup-main {
-  display: flex;
-  height: 90vh;
+  height: 70vh;
+  width: 68% auto;
   align-items: center;
+  margin: 0 auto;
   justify-content: start;
   color: #ffff;
+  background-color: #ffff;
+  /* margin-top: 0.4em; */
+  padding: 1.2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #000000;
+  color: #000000;
 }
 
 
+.lookup-main h2 {
+  display: flex;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  position:relative;
+  justify-content: center;
+  margin: 10px auto;
+}
 .view-client {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 auto;
+  margin: 10px auto;
   justify-content: top;
-  width: 66%;
+  width: 65% auto;
   height: 26%;
   background-color: #ffff;
   /* margin-top: 0.4em; */
@@ -192,6 +208,12 @@ ul {
   box-shadow: 0px 0px 20px #000000;
   color: #000000;
   
+}
+.view-client label {
+  margin: 0.4rem 0;
+  padding: 8px;
+  display: block;
+  font-size: larger;
 }
 
 .lookup{

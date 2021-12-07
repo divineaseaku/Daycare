@@ -27,17 +27,14 @@
         </div>
       </header>
       <div class="main">
-        <div class="reg-form">
+        <div class="reg-form" id="reg-form">
           <h2>New Registraton</h2>
           <form>
-            <label for="fname">First name:</label>
+            <label for="name">Name:</label>
             <br />
-            <input type="text" id="fname" name="fname" />
+            <input type="text" id="name" name="name" />
             <br />
-            <label for="lname">Last name:</label>
-            <br />
-            <input type="text" id="lname" name="lname" />
-            <br />
+            
             <label for="age">Age:</label>
             <br />
             <input type="text" id="age" name="age" />
@@ -47,14 +44,14 @@
             <input type="text" id="address" name="address" />
             <br /><br/>
 
-            <label for="pfname">Parents First name:</label>
+            <label for="pname">Parents name:</label>
             <br />
-            <input type="text" id="pfname" name="pfname" />
+            <input type="text" id="pname" name="pname" />
             <br />
-            <label for="p1lname">Parents Last name:</label>
+            <label for="pname">Parents email:</label>
             <br />
-            <input type="text" id="plname" name="plname" />
-            <br />
+            <input type="text" id="email" name="email" />
+            <br /> 
             <label for="phone">Phone number:</label>
             <br />
             <input
@@ -66,29 +63,10 @@
               required
             />
             <br />
-            <!-- <br />
-            <label for="p2fname">Father's First name:</label>
-            <br />
-            <input type="text" id="p2fname" name="p2fname" />
-            <br />
-            <label for="p2lname">Father's Last name:</label>
-            <br />
-            <input type="text" id="p2lname" name="p2lname" />
-            <br />
-            <label for="phone">Phone number:</label><br />
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="123-456-7890"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required
-            />
-            <br />  -->
             <br />
             <label for="message">More Info</label>
             <br />
-            <textarea name="message" id="" cols="20" rows="14"></textarea>
+            <textarea name="message" id="more-info" cols="20" rows="14"></textarea>
             <br />
             <input type="submit" id="submit" value="Submit" />
           </form>
@@ -96,7 +74,6 @@
 
       </div>
   </body>
-  <footer><p>© Copyright 2021</p></footer>
 </div>
 </html>
 

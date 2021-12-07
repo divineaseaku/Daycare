@@ -30,21 +30,32 @@
       <div class="lookup-main">
         <h2>View Client Profile</h2>
         <div class="view-client">
-          <label for="fname">First name:</label>
-          <br />
-          <input type="text" id="fname" name="fname" />
-          <br />
-          <label for="lname">Last name:</label>
-          <br />
-          <input type="text" id="lname" name="lname" />
-          <br />
-          <br />
+          <form id="lookup-form">
+            <label for="name">Name:</label>
+            <br />
+            <input type="text" id="lookup-name" name="name" required/>
+            <br />
+            <label for="age">Age:</label>
+            <br />
+            <input type="text" id="lookup-age" name="age" required/>
+            <br />
+            <br />
 
-          <button class="lookup">Search</button>
-
-          <!-- <div class="resiults">
-          h3>Results</h3>
-          </div> -->
+            <button class="lookup" id = "search">Search</button>
+          </form>
+        </div>
+        <div class="results">
+          <h3>Client Info </h3>
+            
+            <div class="client-info">
+              <p>kids Name: {{ client.name }}</p>
+              <p>Age: {{ client.age }}</p>
+              <p>Parents Name: {{ client.address }}</p>
+              <p>Parents Email: {{ client.email }}</p>
+              <p>Parents Phone: {{ client.phone }}</p>
+              <p>Address: {{ client.address }}</p>
+              
+          </h3>
         </div>
       </div>
     </div>

@@ -27,32 +27,32 @@
         </div>
       </header>
       <div class="main">
-        <div class="reg-form" id="reg-form">
+        <div class="reg-form" >
           <h2>New Registraton</h2>
-          <form>
-            <label for="name">Name:</label>
+          <form id="reg-form">
+            <label for="cname">Name:</label>
             <br />
-            <input type="text" id="name" name="name" />
+            <input type="text" id="childs-name" name="cname required" />
             <br />
             
-            <label for="age">Age:</label>
+            <label for="cage">Age:</label>
             <br />
-            <input type="text" id="age" name="age" />
+            <input type="text" id="childs-age" required name="cage" />
             <br />
             <label for="address">Address:</label>
             <br />
-            <input type="text" id="address" name="address" />
+            <input type="address" id="address" name="address" />
             <br /><br/>
 
             <label for="pname">Parents name:</label>
             <br />
-            <input type="text" id="pname" name="pname" />
+            <input type="text" id="parents-name" required name="pname" />
             <br />
-            <label for="pname">Parents email:</label>
+            <label for="pemail">Parents email:</label>
             <br />
-            <input type="text" id="email" name="email" />
+            <input type="email" id="parents-email" required name="pmail" />
             <br /> 
-            <label for="phone">Phone number:</label>
+           <label for="phone">Phone number:</label>
             <br />
             <input
               type="tel"
@@ -68,13 +68,16 @@
             <br />
             <textarea name="message" id="more-info" cols="20" rows="14"></textarea>
             <br />
-            <input type="submit" id="submit" value="Submit" />
+            <input type="submit" id="submit" value="submit" />
           </form>
         </div>
 
       </div>
+      <!-- <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js" > </script> -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+      <script src="../script/main.js"></script>
   </body>
-</div>
 </html>
 
 

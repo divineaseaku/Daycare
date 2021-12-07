@@ -4,7 +4,7 @@
   margin: 0;
 }
 body {
-  background-image: url("../imgs/backgroung.jpg");
+  background-image: url('../imgs/backgroung.jpg');
   /* background-color: #111; */
   height: 100vh;
   background-size: cover;
@@ -133,7 +133,7 @@ ul {
   align-items: center;
   margin: 0 auto;
   justify-content: center;
-  width: 50% ;
+  width: 50%;
   height: 80% auto;
   background-color: #ffff;
   margin-top: 2.3em;
@@ -164,7 +164,7 @@ ul {
   margin: 0 auto;
   transition: all 0.3s ease-in 0s;
 }
-  
+
 .reg-form #submit:hover {
   background-color: #8e0b0b;
 }
@@ -184,12 +184,11 @@ ul {
   color: #000000;
 }
 
-
 .lookup-main h2 {
   display: flex;
   font-size: 2.5em;
   text-transform: uppercase;
-  position:relative;
+  position: relative;
   justify-content: center;
   margin: 10px auto;
 }
@@ -207,7 +206,6 @@ ul {
   border-radius: 20px;
   box-shadow: 0px 0px 20px #000000;
   color: #000000;
-  
 }
 .view-client label {
   margin: 0.4rem 0;
@@ -216,16 +214,16 @@ ul {
   font-size: larger;
 }
 
-.lookup{
+.lookup {
   background-color: #964545;
   padding: 0.4em;
   border-radius: 20%;
   color: #ffff;
   display: block;
   margin: 8px;
-  transition: all 0.3s ease-in 0s; 
+  transition: all 0.3s ease-in 0s;
 }
-.lookup:hover{
+.lookup:hover {
   background-color: #8e0b0b;
 }
 
@@ -233,3 +231,77 @@ footer {
   margin-top: 100%;
   color: #ffff;
 }
+
+/* contact us */
+.contact-main {
+  display: flex;
+  height: 60vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us {
+  display: grid;
+  grid-template-columns: 1fr;
+ 
+  background-color: #fff;
+  border-radius: 10px;
+ 
+  height: 300px;
+  width: 50% auto;
+  color: #000;
+  margin: 0 auto;
+}
+
+.contact-us h2 {
+  color: #000;
+  font-weight: bolder;
+  font-size: 1.9em;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  height: 20px;
+  justify-self: center;
+}
+.contact-us p {
+  color: #000;
+  font-size: 1.3em;
+  padding: 8px;
+  text-align: center;
+  max-width: 700px;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.contact-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  border-radius: 10px;
+  height: 25px;
+}
+.cards {
+  background-color: #964545;
+  height: auto;
+  align-self: center;
+  margin: 2px;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.cards h4,
+i {
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  justify-self: center;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  color: #ffff;
+}
+
+.email:hover {
+  color: rgb(18, 19, 19);
+  transition: all 0.4s ease-in 0s;
+}
+
+/* media queries */

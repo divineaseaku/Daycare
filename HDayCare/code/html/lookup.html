@@ -41,24 +41,19 @@
             <br />
             <br />
 
-            <button class="lookup" id = "search">Search</button>
+            <button class="lookup" id = "searchButton">Search</button>
           </form>
         </div>
-        <div class="results">
-          <h3>Client Info </h3>
-            
-            <div class="client-info">
-              <p>kids Name: {{ client.name }}</p>
-              <p>Age: {{ client.age }}</p>
-              <p>Parents Name: {{ client.address }}</p>
-              <p>Parents Email: {{ client.email }}</p>
-              <p>Parents Phone: {{ client.phone }}</p>
-              <p>Address: {{ client.address }}</p>
-              
-          </h3>
+        
+        <div id="info-area">
+          <h3>Client Info </h3> 
+          <div id="display-info">
+            hey
         </div>
       </div>
     </div>
-    <script src="../script/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="../script/lookup.js"></script>
   </body>
 </html>

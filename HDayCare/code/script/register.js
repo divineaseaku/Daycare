@@ -25,9 +25,10 @@ function getInputVal(id) {
 }
 
 //Create Event Listener To Allow Form Submission
+// the code for submission is put in the event listener
 submitForm.addEventListener("click", (e) => {
   //Prevent Default Form Submission Behavior
-  e.preventDefault()
+  e.preventDefault();
 
   //get values
   let childsName = getInputVal('childs-name').value
@@ -58,45 +59,6 @@ submitForm.addEventListener("click", (e) => {
     //Clear Form
     document.getElementById('reg-form').reset();
 });
-
-
-//Get Data From Firebase
-let searchForm = document.getElementById('search');
-searchForm.addEventListener("click", (e) => {
-    //Prevent Default Form Submission Behavior
-    e.preventDefault()  
-    //Get Values
-
-
-
-    let name = getInputVal('lookup-name').value
-    let age= getInputVal('lookup-age').value 
-    firebase.firestore().collection("fomData").where("childsName", "==", name).where("childsAge", "==", age).get().then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-        });
-    })
-    .catch(function(error) {
-        console.log("Error getting documents: ", error);
-    });
-});
-
-
-    // firebase.database().ref('fomData').orderByChild('childsAge').equalTo(age).on('value', function(snapshot) {
-    //     snapshot.forEach(function(data) {
-    //         console.log(data.val().childsName)
-    //         console.log(data.val().childsAge)
-    //         console.log(data.val().parentsName)
-    //         console.log(data.val().parentsEmail)
-    //         console.log(data.val().phone)
-    //         console.log(data.val().address)
-    //     });
-    // }, function (error) {
-    //     console.log("Error: " + error.code);
-    // });
-  
-
 
 
 

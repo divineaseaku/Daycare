@@ -291,11 +291,28 @@ i {
   transition: all 0.4s ease-in 0s;
 }
 /* for lookup page */
-.results {
+#view-results {
 /* display: none; */
-  text-align: center;
-  margin:10px auto;
+  margin:10px;
+  align-self: center;
+}
+#info-area {
+  /* display: none; */
+  margin:20px;
+  align-self: center;
 }
 
+#info-area h3 {
+  font-size: 1.7em;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px auto;
+}
+ .card-body {
+  display: flex;
+  flex-direction: column;
+  
+  color: #000000;
+  
 
 /* media queries */

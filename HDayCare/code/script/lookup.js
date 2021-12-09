@@ -22,17 +22,15 @@ function getInputVal(id) {
   return document.getElementById(id);
 }
 
+var lookupName = getInputVal("lookup-name");
+var lookupAge = getInputVal("lookup-age");
 
-//const dbValue = firestore.ref('fomData');
 var dbValue = firestore.collection("fomData").get()
 .then(function(querySnapshot) {
     querySnapshot.forEach(function(client) {
 
-      //add event listener to search button
-      searchButton.addEventListener('click', function(e){
-  //get values from firebase
-     // if (client.data().name == lookupName && client.data().age == lookupAge) {
-       
+      
+    
         var Name = client.data().childsName
         var Age = client.data().childsAge
         var  parentsName = client.data().parentsName
@@ -41,19 +39,30 @@ var dbValue = firestore.collection("fomData").get()
         var Address = client.data().address
         var Info = client.data().moreInfo
      
-        //display user data
-        getInputVal("display-info").innerHTML = `
-        <div> ${JSON.stringify(client.data().address) } </div>
-        `;
-      //}
-
-      });
+      
+    
       
         // client.data() is never undefined for query doc snapshots
         //console.log(client.id, " => ", client.apiKey);
-        console.log(client.id, " => ", client.data());
+        //console.log(client.id, " => ", client.data());
+        console.log( client.data());
+
+
+
+        //add event listener to search button
+getInputVal("searchButton").addEventListener("click", getText); 
+
+     function getText(){
+      //get values from firebase
+      if (client.data().name == lookupName && client.data().age == lookupAge) {
+
+        getInputVal("display-info").innerHTML += Phone;
+        //console.log("hey hey");
+       
+     }
+    };
     });
-});
+    });
 
 
 

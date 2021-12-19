@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore()
 
 //Variable to access database collection
-const database = firestore.collection("fomData")
+const database = firestore.collection("formData")
 
 //Get Submit Form
 let submitForm = document.getElementById('submit');
@@ -40,7 +40,7 @@ submitForm.addEventListener("click", (e) => {
   let moreInfo = getInputVal('more-info').value
 
   //Save Form Data To Firebase
-    database.doc().set({
+    database.doc(childsName).set({
        childsName: childsName,
         parentsName: parentsName,
         childsAge: childsAge,
@@ -51,6 +51,7 @@ submitForm.addEventListener("click", (e) => {
     })
     .then(function() {
         console.log("Document successfully written!");
+        alert("Form submitted successfully ");
     })
     .catch(function(error) {
         console.error("Error writing document: ", error);

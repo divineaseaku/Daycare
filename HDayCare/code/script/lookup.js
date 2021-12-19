@@ -22,48 +22,69 @@ function getInputVal(id) {
   return document.getElementById(id);
 }
 
-var lookupName = getInputVal("lookup-name");
-var lookupAge = getInputVal("lookup-age");
 
-var dbValue = firestore.collection("fomData").get()
-.then(function(querySnapshot) {
-    querySnapshot.forEach(function(client) {
-
-      
-    
-        var Name = client.data().childsName
-        var Age = client.data().childsAge
-        var  parentsName = client.data().parentsName
-        var  Phone = client.data().phone
-        var  parentsEmail = client.data().parentsEmail
-        var Address = client.data().address
-        var Info = client.data().moreInfo
-     
-      
-    
-      
+        
         // client.data() is never undefined for query doc snapshots
-        //console.log(client.id, " => ", client.apiKey);
-        //console.log(client.id, " => ", client.data());
-        console.log( client.data());
-
-
+        // console.log(client.id, " => ", output.phone);
+       // console.log(client.id, " => ", output);
+        //const output = JSON.parse(client.data());
+        //console.log( output.parentsEmail);
 
         //add event listener to search button
-getInputVal("searchButton").addEventListener("click", getText); 
+    document.querySelector(".lookup").addEventListener("click", function(e) {
+          e.preventDefault();   
+          //get the value of the input
+          var searchName = getInputVal("lookup-name").value.trim();
+          //check if the input is not empty
+          if (searchName != "") {
+            //get the data from firebase
+          var docRef = firestore.collection("formData").doc(searchName).get()
+          docRef.then((doc) => {
+                if (doc.exists) {
+                     console.log("Document data:", doc.data());
 
-     function getText(){
-      //get values from firebase
-      if (client.data().name == lookupName && client.data().age == lookupAge) {
+                   const output = doc.data();
+                  console.log(output.phone);
+            //display the data in the html
+            getInputVal("info-area").style.display = "block";
+            getInputVal("display-info").innerHTML = `
+            <p>Name: ${output.childsName}</p>
+            <p>Age: ${output.childsAge}</p> 
+            <p>Parents Name: ${output.parentsName}</p>
+            <p>Parents Email: ${output.parentsEmail}</p>
+            <p>Parents Phone: ${output.phone}</p>
+            <p>Address: ${output.address}</p>
+            `
 
-        getInputVal("display-info").innerHTML += Phone;
-        //console.log("hey hey");
-       
-     }
-    };
-    });
-    });
+            //clear input
+            getInputVal("lookup-name").value = "";
+          }
+          else {
+            alert ("User not found!");
+            console.log("No such document!");
+            //clear input
+            getInputVal("lookup-name").value = "";
+          } 
+      });
+          } else {
+            alert("Please enter a name!");
+          } 
+});
 
 
 
 
+
+
+
+      //get all users from  firebase
+      // var dbValue = firestore.collection("formData").get()
+// .then(function(querySnapshot) {
+//     querySnapshot.forEach(function(client) {
+// const output = client.data();
+//)}
+//)}
+      
+   
+ 
+ 

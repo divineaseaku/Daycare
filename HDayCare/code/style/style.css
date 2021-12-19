@@ -149,75 +149,7 @@ ul {
 .reg-form #submit:hover {
   background-color: #8e0b0b;
 }
-/* view client */
-.lookup-main {
-  height: 70vh;
-  width: 68% auto;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: start;
-  color: #ffff;
-  background-color: #ffff;
-  /* margin-top: 0.4em; */
-  padding: 1.2em;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px #000000;
-  color: #000000;
-}
 
-.lookup-main h2 {
-  display: flex;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  position: relative;
-  justify-content: center;
-  margin: 10px auto;
-}
-.view-client {
-  
-  width: 65% auto;
-  height: 26%;
-  background-color: #ffff;
-  /* margin-top: 0.4em; */
-  padding: 1.2em;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px #000000;
-  color: #000000;
-}
-.view-client label {
-  margin: 0.4rem 0;
-  padding: 8px;
-  display: block;
-  font-size: larger;
-  
-}
-#lookup-form{
-  display: flex;
-  justify-self: center;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px auto;
-  justify-content: center;
-  align-self: center;
-
-}
-.lookup {
-  background-color: #964545;
-  padding: 0.4em;
-  border-radius: 20%;
-  color: #ffff;
-  display: block;
-  margin: 8px;
-  transition: all 0.3s ease-in 0s;
-}
-.lookup:hover {
-  background-color: #8e0b0b;
-}
-
-footer {
-  margin-top: 100%;
-  color: #ffff;
-}
 
 /* contact us */
 .contact-main {
@@ -290,6 +222,87 @@ i {
   color: rgb(18, 19, 19);
   transition: all 0.4s ease-in 0s;
 }
+
+/* view client */
+.lookup-main {
+  height: 70vh;
+  width: 68% auto;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: start;
+  color: #ffff;
+  background-color: #ffff;
+  /* margin-top: 0.4em; */
+  padding: 1.2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #000000;
+  color: #000000;
+}
+
+.lookup-main h2 {
+  display: flex;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  position: relative;
+  justify-content: center;
+  margin: 10px auto;
+}
+.view-client {
+  
+  width: 65% auto;
+  height: 26%;
+  background-color: #ffff;
+  /* margin-top: 0.4em; */
+  padding: 1.2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px #000000;
+  color: #000000;
+}
+.view-client label {
+  margin: 0.4rem 0;
+  padding: 8px;
+  display: block;
+  font-size: larger;
+}
+
+#lookup-form{
+  display: flex;
+  justify-self: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px auto;
+  justify-content: center;
+  align-self: center;
+
+}
+#lookup-form input{
+  width: 20%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 5px;
+}
+.lookup {
+  background-color: #964545;
+  padding: 0.4em;
+  border-radius: 20%;
+  color: #ffff;
+  display: block;
+  margin: 8px;
+  transition: all 0.3s ease-in 0s;
+}
+.lookup:hover {
+  background-color: #8e0b0b;
+}
+
+footer {
+  margin-top: 100%;
+  color: #ffff;
+}
+
+
+
 /* for lookup page */
 #view-results {
 /* display: none; */
@@ -301,18 +314,31 @@ i {
   margin:20px;
   align-self: center;
 }
+#info-area {
+  
+  display: none;
+  margin: 25px auto;
+  align-self: center;
+  width: 50%;
+
+}
 
 #info-area h3 {
   font-size: 1.7em;
   text-align: center;
   text-transform: uppercase;
   margin: 10px auto;
-}
- .card-body {
-  display: flex;
-  flex-direction: column;
   
-  color: #000000;
+}
+#display-info{
+  margin: 6px auto;
+}
+#display-info p {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 10px auto;
+}
+
   
 
 /* media queries */

@@ -10,7 +10,7 @@ body {
   background-size: cover;
   position: relative;
   background-position: center center;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .container {
   width: 90%;
@@ -121,6 +121,52 @@ ul {
 .new-client:hover {
   background-color: #8e0b0b;
 }
+
+/* side menu and btn */
+.slide-btn{
+  display: none;
+}
+.side-menu {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  height: 100%;
+  background-color: #111;
+  z-index: 1;
+ padding-top: 40px;
+ transition: 0.7s;
+}
+
+.side-menu a{
+  color: #000;
+  font-size: 1.3em;
+  margin: 0 auto;
+  font-weight: 26px;
+  font-weight: bold;
+  padding: 20px; 
+  color: #ffff;
+  display: block;
+  text-align: left;
+  transition: 0.5s;
+  margin-left: 60px;
+}
+.side-menu a:hover{
+  background-color: #8e0b0b;
+  color: #ffff;
+ border-radius: 5px;
+}
+
+.side-menu .close-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+
 
 /*new registration form*/
 .reg-form {
@@ -385,6 +431,78 @@ footer {
   
 
 /* media queries */
+@media screen  and (max-width:1350px ){
+  /* look up */
+  .view-client{
+    height: fit-content;
+  }
+
+.lookup-main {
+  height: 65vh;
+  max-width: 100%;
+  width: 40% ;
+  padding: 0.8em;
+  height: fit-content;
+  margin-bottom: 3px;
+}
+#lookup-form{
+ display: grid;
+ grid-template-columns: 2fr 5fr;
+}
+
+#lookup-form input {
+  width: 120px;
+  height: 40px;
+}
+}
+
+@media screen and (max-width: 1000px) and ( min-width: 700px) {
+  /* header */
+  .nav-list li{
+  font-size: 1.1em;
+  }
+  .nav-logo img {
+    width: 100px auto;
+    margin-bottom: 10px;
+    height: 90px;
+  }
+
+  .profile-btn a {
+    padding: 0.3em;
+    font-size: 1.2em;
+    border-radius: 20%;
+  }
+/* register */
+.reg-form {
+ width: 70%;
+}
+.reg-form h2 {
+  font-size: 1.8em;
+}
+
+.reg-form label {
+  font-size: 0.6em;
+  font-weight: bolder;
+}
+
+
+.contact-cards {
+  grid-gap: 0.2rem;
+  height: 25px;
+
+  grid-template-columns: 1fr; 
+}
+ /* look up */
+ .lookup-main {
+  height: 65vh;
+  max-width: 100%;
+  width: 50% ;
+  padding: 0.8em;
+}
+
+}
+
+
 @media screen and (max-width: 700px) {
   /* header */
   .nav-list li{
@@ -437,26 +555,17 @@ footer {
 .reg-form #submit {
  height: 25px;
 }
-/* look up */
-.lookup-main {
+ /* look up */
+ .lookup-main {
   height: 65vh;
   max-width: 100%;
-  width: 100% auto;
+  width: 60% ;
   padding: 0.8em;
-  
+}
+.lookup-main h2 {
+  font-size: 0.9em;
 }
 
-.lookup-main h2 {
-  font-size: 1.6em;
-}
-.view-client {
-  width: 85% auto;
-  height: 26%;
-  
-}
-.view-client label {
-  font-size: medium;
-}
 /* contact page */
 .contact-main{
   height: 80vh;
@@ -481,7 +590,6 @@ footer {
 
 }
 
-
 .cards h4{
   font-size: 20px;
   color: #ffff;
@@ -489,60 +597,69 @@ footer {
 }
 .cards i {
   font-size: 0.8em;;
-  
 }
 }
 
-
- 
-@media screen and (max-width: 850px) and ( min-width: 700px) {
+/* Smallest screens */
+@media screen and (max-width: 550px)  {
   /* header */
-  .nav-list li{
-  font-size: 1.1em;
+  .nav-list{
+  display: none;
+  }
+
+  .slide-btn{
+    display: block;
   }
   .nav-logo img {
-    width: 100px auto;
-    margin-bottom: 10px;
-    height: 90px;
+    height: 110px;
+  }
+  .profile-btn a {
+   display: none;
   }
 
-  .profile-btn a {
-    background-color: #964545;
-    padding: 0.3em;
-    font-size: 1.2em;
-    border-radius: 20%;
-  }
 /* register */
-.reg-form {
- width: 70%;
+  .reg-form {
+ width: fit-content;
 }
 .reg-form h2 {
-  font-size: 1.8em;
+  text-align: center;
+  font-size: 1.5em;
 }
-
-.reg-form label {
-  font-size: 0.6em;
-  font-weight: bolder;
+ /* look up */
+ .lookup-main {
+  width: 85% ;
 }
-
-/* look up */
-.lookup-main {
-  max-width: 100%;
+#lookup-form .lookup {
+ font-size: small;
+ margin: 0px;
+ padding: 2px;
+}
+#lookup-form label{
+  font-size: small;
+  margin: 0px;
+  padding: 1px;
+ }
+ #display-info p {
+  font-size: 0.4em;
+  margin: 2px auto;
+}
+#info-area h3{
+ font-size: small;
 }
 
 /* contact page */
 
 .contact-us{
-  height: 400px ;
+  height: 500px ;
 }
+.cards h4{
+  font-size: 11px;
+  font-weight: 400;
 
-.contact-cards {
-  grid-gap: 0.2rem;
-  height: 25px;
-
-  grid-template-columns: 1fr;
-  
 }
 
 }
+
+ 
+
   

@@ -299,6 +299,7 @@ i {
 /* view client */
 .lookup-main {
   height: 70vh;
+
   max-width: 40%;
   width: 68% auto;
   align-items: center;
@@ -317,6 +318,7 @@ i {
   display: flex;
   font-size: 2.5em;
   text-transform: uppercase;
+  text-align: center;
   position: relative;
   justify-content: center;
   margin: 10px auto;
@@ -442,7 +444,7 @@ footer {
   max-width: 100%;
   width: 40% ;
   padding: 0.8em;
-  height: fit-content;
+  /* height: fit-content; */
   margin-bottom: 3px;
 }
 #lookup-form{
@@ -459,7 +461,7 @@ footer {
 @media screen and (max-width: 1000px) and ( min-width: 700px) {
   /* header */
   .nav-list li{
-  font-size: 1.1em;
+  font-size: 1em;
   }
   .nav-logo img {
     width: 100px auto;
@@ -469,7 +471,7 @@ footer {
 
   .profile-btn a {
     padding: 0.3em;
-    font-size: 1.2em;
+    font-size: 1em;
     border-radius: 20%;
   }
 /* register */
@@ -485,7 +487,13 @@ footer {
   font-weight: bolder;
 }
 
-
+/* contact page */
+.contact-main{
+  height: 70vh;
+}
+.contact-us{
+  height: 400px ;
+}
 .contact-cards {
   grid-gap: 0.2rem;
   height: 25px;
@@ -568,7 +576,7 @@ footer {
 
 /* contact page */
 .contact-main{
-  height: 80vh;
+  height: 70vh;
 }
 .contact-us{
   height: 400px ;

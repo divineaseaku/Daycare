@@ -1,2 +1,2 @@
 # Daycare
- Daycare application that collects and stores customer information in a dynamic database. Customer data from the database can be pulled and viewed by daycare employees and staff.
+ site that aids in collecting customer information, as they register their kids into a daycare. Data is store into a dynamic database, which can later be retrieved and updated by daycare employees and staff. 
